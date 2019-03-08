@@ -5,7 +5,9 @@
 
     <h1>Login</h1>
 
-<form>
+<form method = "POST" action="{% url 'login'%}">
+    {% csrf_token %} 
+    
     Username:
     <br>
     <input name="username" type="text" value="">
@@ -19,3 +21,5 @@
     <br>
 </form>    
 </div>
+
+{% endblock %}
